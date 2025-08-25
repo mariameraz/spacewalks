@@ -1,7 +1,7 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('/Users/alejandra/Documents/Carpentries Workshops/spacewalks/eva-data.json', 'r')
-data_t = open('/Users/alejandra/Documents/Carpentries Workshops/spacewalks/eva_data_analysis.py','w')
-g_file = 'cumulative_eva_graph.png'
+data_f = open('./eva-data.json', 'r')
+data_t = open('./eva-data.csv','w')
+g_file = './cumulative_eva_graph.png'
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
