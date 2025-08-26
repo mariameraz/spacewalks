@@ -8,10 +8,9 @@ input_file = open('./eva-data.json', 'r')
 output_file = open('./eva-data.csv','w')
 graph_file = './cumulative_eva_graph.png'
 
-fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
+
 
 data=[]
-
 
 for i in range(374):
     line=input_file.readline()
@@ -21,6 +20,7 @@ for i in range(374):
 ## Comment out this bit if you don't want the spreadsheet
 
 w=csv.writer(output_file)
+
 
 
 time = []
