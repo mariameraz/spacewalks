@@ -8,6 +8,15 @@ output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png' 
 
 def read_json_to_df(input_file):
+    """
+    Read the data from JSON file into a pandas dataframe.
+
+    Args:
+        input_file (str): The path to the JSON file.
+    
+    Returns:
+        eva_data (pd.DataFrame): The cleaned and sorted data as a dataframe structure.
+    """
         
     # Read in the data from JSON file into pandas df
     eva_df = pd.read_json(input_file, convert_dates=['date']) 
@@ -20,6 +29,16 @@ def read_json_to_df(input_file):
 eva_df = read_json_to_df(input_file)
 
 def write_df_to_csv(eva_df, output_file):
+    """"
+    Write the dataframe to a csv file.
+
+    Args:
+        eva_df (pd.DataFrame): The dataframe to be written to csv.
+        output_file (str): The path to the output csv file.
+
+    Returns:
+        None
+    """
     eva_df.to_csv(output_file, index=False)
     return None
 
